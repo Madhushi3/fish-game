@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80" width="160" height="80">
+  <defs>
+    <!-- Realistic 3D cylindrical wooden log bark gradient -->
+    <linearGradient id="woodBarkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="15%" stop-color="#d97706" />
+      <stop offset="35%" stop-color="#92400e" />
+      <stop offset="70%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+
+    <!-- Cut tree cross-section / growth rings gradient -->
+    <radialGradient id="treeRingsGradient" cx="45%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="25%" stop-color="#fde047" />
+      <stop offset="55%" stop-color="#d97706" />
+      <stop offset="85%" stop-color="#92400e" />
+      <stop offset="100%" stop-color="#451a03" />
+    </radialGradient>
+
+    <!-- Top sun highlight on the log -->
+    <linearGradient id="sunHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0" />
+      <stop offset="30%" stop-color="#fde047" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#fef08a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Soft water ripple shadow under floating log -->
+    <radialGradient id="waterRipples" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#0369a1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Water wake & soft blue-cyan ripple under floating log -->
+  <ellipse cx="80" cy="56" rx="72" ry="16" fill="url(#waterRipples)" />
+  <ellipse cx="80" cy="54" rx="66" ry="12" fill="#000000" opacity="0.25" />
+
+  <!-- 2. Main 3D Timber Body (Cylindrical Log) -->
+  <path
+    d="M 32 20
+       L 132 20
+       C 144 20, 150 28, 150 38
+       C 150 48, 144 56, 132 56
+       L 32 56
+       C 20 56, 12 48, 12 38
+       C 12 28, 20 20, 32 20 Z"
+    fill="url(#woodBarkGradient)"
+    stroke="#381404"
+    stroke-width="2.5"
+  />
+
+  <!-- 3. Left Cut Tree Trunk Cross-Section with Growth Rings -->
+  <g>
+    <!-- Base cut wood oval -->
+    <ellipse cx="32" cy="38" rx="16" ry="18" fill="url(#treeRingsGradient)" stroke="#381404" stroke-width="2.5" />
+    <!-- Outer ring -->
+    <ellipse cx="32" cy="38" rx="12" ry="13.5" fill="none" stroke="#78350f" stroke-width="1.8" opacity="0.8" />
+    <!-- Middle ring -->
+    <ellipse cx="32" cy="38" rx="8" ry="9" fill="none" stroke="#92400e" stroke-width="1.8" opacity="0.8" />
+    <!-- Inner ring -->
+    <ellipse cx="32" cy="38" rx="4.5" ry="5" fill="none" stroke="#b45309" stroke-width="1.5" opacity="0.9" />
+    <!-- Tree heart / pith center -->
+    <circle cx="32" cy="38" r="2" fill="#451a03" />
+  </g>
+
+  <!-- 4. Deep Wood Bark Grooves / Ridges across trunk -->
+  <g opacity="0.85">
+    <!-- Dark bark grooves -->
+    <path d="M 46 29 Q 88 27 138 29" stroke="#381404" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    <path d="M 42 38 Q 92 36 142 38" stroke="#451a03" stroke-width="2.8" stroke-linecap="round" fill="none" />
+    <path d="M 45 47 Q 85 45 136 47" stroke="#260b01" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    
+    <!-- Short bark knots and texture cracks -->
+    <path d="M 70 33 Q 76 31 84 34" stroke="#260b01" stroke-width="2" stroke-linecap="round" fill="none" />
+    <path d="M 108 41 Q 114 43 122 41" stroke="#260b01" stroke-width="2" stroke-linecap="round" fill="none" />
+    <ellipse cx="98" cy="36" rx="4" ry="2.5" fill="#381404" />
+    <circle cx="98" cy="36" r="1.5" fill="#fde047" opacity="0.5" />
+  </g>
+
+  <!-- 5. Warm Golden Amber Highlights (Log top facing the sun) -->
+  <path d="M 44 23 L 134 23" stroke="url(#sunHighlight)" stroke-width="3" stroke-linecap="round" />
+  <path d="M 52 26 L 126 26" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+  <!-- 6. Bottom Wet Reflection / Submerged Shadow -->
+  <path d="M 38 54 Q 90 56 132 54" stroke="#1c0701" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+
+  <!-- 7. Tiny Water Splashes / Foam on sides of floating log -->
+  <g fill="#ffffff" opacity="0.8">
+    <ellipse cx="26" cy="54" rx="3" ry="1.5" />
+    <ellipse cx="32" cy="56" rx="4" ry="2" />
+    <circle cx="138" cy="54" r="1.5" />
+    <ellipse cx="144" cy="55" rx="3" ry="1.5" />
+  </g>
+</svg>

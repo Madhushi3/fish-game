@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" width="120" height="90" fill="none">
+  <defs>
+    <linearGradient id="fishOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#fb923c"/>
+      <stop offset="50%" stopColor="#f97316"/>
+      <stop offset="100%" stopColor="#ea580c"/>
+    </linearGradient>
+    <filter id="fishShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#fishShadow)">
+    <!-- Tail Fin -->
+    <path d="M28 45 L8 22 Q14 45 6 68 L28 45 Z" fill="url(#fishOrange)" stroke="#9a3412" stroke-width="2"/>
+    <path d="M12 28 Q18 45 10 62" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Dorsal Fin -->
+    <path d="M48 24 Q65 8 82 20 Q65 18 48 24 Z" fill="url(#fishOrange)" stroke="#9a3412" stroke-width="2"/>
+    <path d="M56 18 Q68 14 76 20" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Pectoral / Bottom Fin -->
+    <path d="M52 64 Q68 78 80 68 Q66 68 52 64 Z" fill="url(#fishOrange)" stroke="#9a3412" stroke-width="2"/>
+
+    <!-- Main Fish Body -->
+    <path d="M25 45 C28 20 65 14 96 32 C114 42 114 48 96 58 C65 76 28 70 25 45 Z" fill="url(#fishOrange)" stroke="#9a3412" stroke-width="2.5"/>
+
+    <!-- White Stripe 1 (Middle) with Black Borders -->
+    <path d="M56 19 C52 35 52 55 58 70 C64 68 66 52 64 21 Z" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+
+    <!-- White Stripe 2 (Head) with Black Borders -->
+    <path d="M82 23 C78 36 78 54 84 66 C90 62 92 48 90 27 Z" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
+
+    <!-- Cute Big Cartoon Eye -->
+    <circle cx="95" cy="40" r="8" fill="#ffffff" stroke="#7c2d12" stroke-width="1.5"/>
+    <circle cx="97" cy="40" r="4.5" fill="#0f172a"/>
+    <circle cx="99" cy="38" r="2" fill="#ffffff"/>
+
+    <!-- Cheerful Smile -->
+    <path d="M104 48 Q102 54 96 52" stroke="#7c2d12" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Side Fin -->
+    <path d="M60 44 Q76 40 74 54 Q65 52 60 44 Z" fill="#fdba74" stroke="#c2410c" stroke-width="1.5"/>
+  </g>
+</svg>
+

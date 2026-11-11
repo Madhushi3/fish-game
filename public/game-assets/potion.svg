@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120" fill="none">
+  <defs>
+    <radialGradient id="potionGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="#c084fc" stopOpacity="0.8"/>
+      <stop offset="70%" stopColor="#a855f7" stopOpacity="0.4"/>
+      <stop offset="100%" stopColor="#7e22ce" stopOpacity="0"/>
+    </radialGradient>
+    <linearGradient id="potionLiquid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#e879f9"/>
+      <stop offset="50%" stopColor="#c084fc"/>
+      <stop offset="100%" stopColor="#7e22ce"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glowing Aura -->
+  <circle cx="50" cy="65" r="42" fill="url(#potionGlow)"/>
+
+  <!-- Bottle Cork / Stopper -->
+  <rect x="42" y="15" width="16" height="12" rx="3" fill="#b45309" stroke="#78350f" stroke-width="2"/>
+  <rect x="38" y="24" width="24" height="6" rx="2" fill="#d97706" stroke="#78350f" stroke-width="1.5"/>
+
+  <!-- Flask Neck -->
+  <path d="M42 28 L42 42 L30 65 C22 78 26 98 42 104 C58 110 74 104 80 90 C86 76 74 65 58 42 L58 28 Z" fill="#ffffff" fill-opacity="0.25" stroke="#ffffff" stroke-width="3"/>
+
+  <!-- Magical Purple Liquid Fill -->
+  <path d="M43 50 L34 68 C28 78 30 94 44 100 C58 105 72 98 76 86 C80 74 70 65 57 50 Z" fill="url(#potionLiquid)"/>
+
+  <!-- Liquid Surface Wave -->
+  <path d="M35 68 Q45 62 55 68 Q65 74 74 66" stroke="#f0abfc" stroke-width="2" fill="none"/>
+
+  <!-- Lightning / Ghost Spark Icon on Flask -->
+  <path d="M52 64 L44 78 L51 78 L47 92 L58 76 L51 76 Z" fill="#fde047" stroke="#ca8a04" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Glass Highlights -->
+  <path d="M34 76 Q32 88 38 96" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <circle cx="48" cy="85" r="2.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="62" cy="78" r="3" fill="#ffffff" opacity="0.6"/>
+</svg>
+

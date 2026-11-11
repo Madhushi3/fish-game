@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" width="160" height="220" fill="none">
+  <defs>
+    <!-- Water wake gradient -->
+    <radialGradient id="swimmerWake" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stopColor="#ffffff" stopOpacity="0.7"/>
+      <stop offset="50%" stopColor="#67e8f9" stopOpacity="0.4"/>
+      <stop offset="100%" stopColor="#0891b2" stopOpacity="0"/>
+    </radialGradient>
+    <!-- Skin Tone -->
+    <linearGradient id="swimmerSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#fed7aa"/>
+      <stop offset="100%" stopColor="#fba362"/>
+    </linearGradient>
+    <!-- Swimsuit Gradient -->
+    <linearGradient id="swimsuit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0284c7"/>
+      <stop offset="50%" stopColor="#0369a1"/>
+      <stop offset="100%" stopColor="#0f172a"/>
+    </linearGradient>
+    <!-- Goggles Gradient -->
+    <linearGradient id="goggles" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#38bdf8"/>
+      <stop offset="100%" stopColor="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Water splash & wake behind swimmer -->
+  <path d="M40 180 Q80 230 120 180 Q95 210 80 215 Q65 210 40 180 Z" fill="url(#swimmerWake)"/>
+  <circle cx="65" cy="205" r="4" fill="#ffffff" opacity="0.6"/>
+  <circle cx="95" cy="208" r="5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="80" cy="216" r="3" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Left Arm (Front Crawl Reaching Forward) -->
+  <g class="arm-left">
+    <path d="M56 85 Q30 65 22 30 Q28 24 38 28 Q48 55 64 78 Z" fill="url(#swimmerSkin)" stroke="#c2410c" stroke-width="1.5"/>
+    <ellipse cx="26" cy="26" rx="9" ry="6" transform="rotate(-30 26 26)" fill="url(#swimmerSkin)"/>
+  </g>
+
+  <!-- Right Arm (Pulling Back / Stroke) -->
+  <g class="arm-right">
+    <path d="M104 85 Q130 65 138 30 Q132 24 122 28 Q112 55 96 78 Z" fill="url(#swimmerSkin)" stroke="#c2410c" stroke-width="1.5"/>
+    <ellipse cx="134" cy="26" rx="9" ry="6" transform="rotate(30 134 26)" fill="url(#swimmerSkin)"/>
+  </g>
+
+  <!-- Left Leg & Flipper/Foot with Splash -->
+  <path d="M60 145 Q50 175 48 195 Q56 198 62 195 Q68 175 72 145 Z" fill="url(#swimmerSkin)" stroke="#c2410c" stroke-width="1.5"/>
+  <ellipse cx="52" cy="198" rx="8" ry="5" fill="#fba362"/>
+
+  <!-- Right Leg & Flipper/Foot with Splash -->
+  <path d="M100 145 Q110 175 112 195 Q104 198 98 195 Q92 175 88 145 Z" fill="url(#swimmerSkin)" stroke="#c2410c" stroke-width="1.5"/>
+  <ellipse cx="108" cy="198" rx="8" ry="5" fill="#fba362"/>
+
+  <!-- Swimmer Torso / Wetsuit (Top-Down View) -->
+  <path d="M52 82 Q48 120 54 150 Q80 156 106 150 Q112 120 108 82 Q80 75 52 82 Z" fill="url(#swimsuit)" stroke="#0c4a6e" stroke-width="2"/>
+  
+  <!-- Sporty Suit Neon Stripes -->
+  <path d="M58 88 Q80 84 102 88" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M62 108 Q80 105 98 108" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M66 128 Q80 126 94 128" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Head (Top-down view with dark hair & swimming cap) -->
+  <ellipse cx="80" cy="55" rx="24" ry="26" fill="#1e293b"/>
+  <!-- Hair Highlights -->
+  <path d="M62 48 Q75 32 98 42 Q92 36 78 35 Q65 38 62 48 Z" fill="#334155"/>
+  <path d="M68 62 Q72 52 85 52" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Blue Swimming Goggles Band & Frame (Top View) -->
+  <ellipse cx="70" cy="40" rx="9" ry="6" transform="rotate(-15 70 40)" fill="url(#goggles)" stroke="#0284c7" stroke-width="2"/>
+  <ellipse cx="90" cy="40" rx="9" ry="6" transform="rotate(15 90 40)" fill="url(#goggles)" stroke="#0284c7" stroke-width="2"/>
+  <line x1="77" y1="39" x2="83" y2="39" stroke="#0284c7" stroke-width="3"/>
+  <ellipse cx="69" cy="39" rx="4" ry="2" fill="#ffffff" opacity="0.8"/>
+  <ellipse cx="89" cy="39" rx="4" ry="2" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Goggles Head Strap -->
+  <path d="M58 46 Q80 44 102 46" stroke="#0284c7" stroke-width="2.5" fill="none"/>
+</svg>
+

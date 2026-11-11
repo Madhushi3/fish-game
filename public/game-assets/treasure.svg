@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100" fill="none">
+  <defs>
+    <linearGradient id="goldChest" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#f59e0b"/>
+      <stop offset="50%" stopColor="#d97706"/>
+      <stop offset="100%" stopColor="#78350f"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#fde047"/>
+      <stop offset="50%" stopColor="#fbbf24"/>
+      <stop offset="100%" stopColor="#d97706"/>
+    </linearGradient>
+    <filter id="chestGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Glowing Aura Backing -->
+  <circle cx="60" cy="50" r="44" fill="#fde047" opacity="0.3" filter="url(#chestGlow)"/>
+
+  <!-- Chest Base -->
+  <rect x="20" y="44" width="80" height="44" rx="8" fill="url(#goldChest)" stroke="#451a03" stroke-width="3"/>
+  <rect x="24" y="48" width="72" height="36" rx="6" fill="#92400e"/>
+
+  <!-- Chest Lid (Slightly curved) -->
+  <path d="M16 45 C16 26 35 18 60 18 C85 18 104 26 104 45 Z" fill="url(#goldChest)" stroke="#451a03" stroke-width="3"/>
+
+  <!-- Golden Trim Straps -->
+  <path d="M36 21 C36 26 36 38 36 88" stroke="url(#goldTrim)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M84 21 C84 26 84 38 84 88" stroke="url(#goldTrim)" stroke-width="8" stroke-linecap="round"/>
+  <!-- Gold Rivets -->
+  <circle cx="36" cy="30" r="2" fill="#451a03"/>
+  <circle cx="36" cy="54" r="2" fill="#451a03"/>
+  <circle cx="36" cy="76" r="2" fill="#451a03"/>
+  <circle cx="84" cy="30" r="2" fill="#451a03"/>
+  <circle cx="84" cy="54" r="2" fill="#451a03"/>
+  <circle cx="84" cy="76" r="2" fill="#451a03"/>
+
+  <!-- Center Gold Plate & Lock -->
+  <rect x="48" y="38" width="24" height="22" rx="4" fill="url(#goldTrim)" stroke="#78350f" stroke-width="2"/>
+  <circle cx="60" cy="46" r="4" fill="#451a03"/>
+  <polygon points="58,48 62,48 63,54 57,54" fill="#451a03"/>
+
+  <!-- Golden Sparkles -->
+  <polygon points="60,8 62,14 68,16 62,18 60,24 58,18 52,16 58,14" fill="#fef08a"/>
+  <polygon points="98,18 100,22 104,23 100,24 98,28 96,24 92,23 96,22" fill="#fef08a"/>
+  <polygon points="18,22 20,25 24,26 20,27 18,31 16,27 12,26 16,25" fill="#fef08a"/>
+</svg>
+

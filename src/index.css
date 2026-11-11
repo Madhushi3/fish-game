@@ -1,0 +1,436 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #08BCEB;
+    --secondary: #087FC1;
+    --deep-ocean: #063B70;
+    --aqua: #65E5F5;
+    --light-bg: #E7FAFF;
+    --yellow-accent: #FFD43B;
+    --orange-accent: #FF9D35;
+  }
+
+  body {
+    background-color: #042144;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Underwater Keyframes & Animations */
+@keyframes floatBubble {
+  0% {
+    transform: translateY(105vh) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(50vh) translateX(15px) scale(1);
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(-15px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes swimSlow {
+  0% {
+    transform: translateX(-120%) translateY(0);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-15px);
+  }
+  100% {
+    transform: translateX(120vw) translateY(0);
+  }
+}
+
+@keyframes gentleBob {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(101, 229, 245, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(255, 212, 59, 0.8));
+  }
+}
+
+@keyframes swaySeaweed {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(6deg) skewX(4deg);
+  }
+}
+
+@keyframes swaySeaweedAlt {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(-6deg) skewX(-4.5deg);
+  }
+}
+
+@keyframes swaySlow {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(4deg) skewX(3deg);
+  }
+}
+
+.animate-float-bubble {
+  animation: floatBubble 12s infinite linear;
+}
+
+.animate-swim {
+  animation: swimSlow 25s infinite linear;
+}
+
+.animate-bob {
+  animation: gentleBob 3.5s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.animate-sway {
+  transform-origin: bottom center;
+  animation: swaySeaweed 4s ease-in-out infinite;
+}
+
+.animate-sway-alt {
+  transform-origin: bottom center;
+  animation: swaySeaweedAlt 5.5s ease-in-out infinite;
+}
+
+.animate-sway-slow {
+  transform-origin: bottom center;
+  animation: swaySlow 7s ease-in-out infinite;
+}
+
+/* Realistic Fish Tail Wag Animation */
+@keyframes tailWag {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(14deg);
+  }
+  75% {
+    transform: rotate(-14deg);
+  }
+}
+
+/* Realistic Fish Fin Flutter */
+@keyframes finFlutter {
+  0%, 100% {
+    transform: scaleX(1) rotate(0deg);
+  }
+  50% {
+    transform: scaleX(0.85) rotate(8deg);
+  }
+}
+
+/* Jellyfish Pulsating Bell & Float */
+@keyframes jellyfishPulse {
+  0%, 100% {
+    transform: scale(1, 1) translateY(0);
+  }
+  40% {
+    transform: scale(0.85, 1.15) translateY(-14px);
+  }
+  70% {
+    transform: scale(1.1, 0.9) translateY(4px);
+  }
+}
+
+/* Swimmer Overhead Arm Strokes */
+@keyframes armStrokeLeft {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-15deg);
+  }
+}
+
+@keyframes armStrokeRight {
+  0%, 100% {
+    transform: translateY(-16px) rotate(15deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Swimmer Flutter Kick */
+@keyframes flutterKick {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.9) translateY(3px);
+  }
+}
+
+/* Floating Score Popup (+50, +100) */
+@keyframes floatScore {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1);
+  }
+}
+
+/* Ambient Cruising Shark */
+@keyframes sharkCruise {
+  0% {
+    transform: translateX(-120vw) scaleX(1);
+  }
+  49% {
+    transform: translateX(120vw) scaleX(1);
+  }
+  50% {
+    transform: translateX(120vw) scaleX(-1);
+  }
+  99% {
+    transform: translateX(-120vw) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-120vw) scaleX(1);
+  }
+}
+
+.animate-tail-wag {
+  transform-origin: 30% 50%;
+  animation: tailWag 0.6s ease-in-out infinite;
+}
+
+.animate-fin-flutter {
+  transform-origin: center;
+  animation: finFlutter 0.4s ease-in-out infinite;
+}
+
+.animate-jellyfish {
+  animation: jellyfishPulse 3.5s ease-in-out infinite;
+}
+
+.animate-arm-left {
+  transform-origin: 50% 80%;
+  animation: armStrokeLeft 0.8s ease-in-out infinite;
+}
+
+.animate-arm-right {
+  transform-origin: 50% 80%;
+  animation: armStrokeRight 0.8s ease-in-out infinite;
+}
+
+.animate-flutter-kick {
+  transform-origin: top center;
+  animation: flutterKick 0.35s ease-in-out infinite;
+}
+
+.animate-float-score {
+  animation: floatScore 0.9s ease-out forwards;
+}
+
+.animate-shark-cruise {
+  animation: sharkCruise 28s linear infinite;
+}
+
+/* ========================================================================= */
+/* REALISTIC SWIMMING ANIMATIONS (Arms Stroke, Body Roll, Flutter Kick)     */
+/* ========================================================================= */
+
+/* Left Arm Swimming Stroke (Reaching forward & pulling back through water) */
+@keyframes swimArmStrokeLeft {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(12px) rotate(10deg) scale(0.94);
+  }
+  50% {
+    transform: translateY(4px) rotate(3deg) scale(0.98);
+  }
+  75% {
+    transform: translateY(-12px) rotate(-8deg) scale(1.06);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}
+
+/* Right Arm Swimming Stroke (180deg out of phase with Left Arm) */
+@keyframes swimArmStrokeRight {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-12px) rotate(8deg) scale(1.06);
+  }
+  50% {
+    transform: translateY(4px) rotate(-3deg) scale(0.98);
+  }
+  75% {
+    transform: translateY(12px) rotate(-10deg) scale(0.94);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}
+
+/* Swimmer Body Roll & Propulsion Glide (Realistic, unbroken body movement) */
+@keyframes swimmerPropulsion {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-5px) rotate(-1.5deg) scale(1.02);
+  }
+  50% {
+    transform: translateY(-1px) rotate(0deg) scale(0.99);
+  }
+  75% {
+    transform: translateY(-5px) rotate(1.5deg) scale(1.02);
+  }
+}
+
+.animate-swimmer-stroke {
+  animation: swimmerPropulsion 1.1s ease-in-out infinite;
+}
+
+.animate-flutter-wake {
+  transform-origin: top center;
+  animation: flutterWakePulse 0.3s ease-in-out infinite;
+}
+
+.animate-arm-splash {
+  animation: armSplashRipples 0.9s ease-in-out infinite;
+}
+
+/* Wooden Banner styling matching Figma reference */
+.wood-banner {
+  background: linear-gradient(180deg, #d97724 0%, #b45309 35%, #92400e 100%);
+  border: 3px solid #78350f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(253, 230, 138, 0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Game Card 3D feel */
+.game-card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(6, 59, 112, 0.4), 0 8px 10px -6px rgba(6, 59, 112, 0.3);
+}
+
+/* Custom scrollbar for game panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(6, 59, 112, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(8, 188, 235, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(101, 229, 245, 0.8);
+}
+
+/* Heart Break Shatter Animations */
+@keyframes heartCrackLeft {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1.1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(-5px, -4px) rotate(-18deg) scale(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-26px, 22px) rotate(-45deg) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes heartCrackRight {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1.1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(5px, -4px) rotate(18deg) scale(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(26px, 22px) rotate(45deg) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes heartDamageShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px) rotate(-1deg); }
+  40% { transform: translateX(6px) rotate(1deg); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes shockwavePing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+.animate-heart-left {
+  animation: heartCrackLeft 0.85s ease-out forwards;
+}
+
+.animate-heart-right {
+  animation: heartCrackRight 0.85s ease-out forwards;
+}
+
+.animate-damage-shake {
+  animation: heartDamageShake 0.45s ease-in-out;
+}
+
+.animate-shockwave {
+  animation: shockwavePing 0.7s ease-out forwards;
+}

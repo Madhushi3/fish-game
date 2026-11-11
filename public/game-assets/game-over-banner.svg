@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120" fill="none">
+  <defs>
+    <!-- Wood Plank Texture Gradient -->
+    <linearGradient id="woodLog" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="25%" stop-color="#92400e" />
+      <stop offset="60%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+
+    <!-- Wood Bark Ends Gradient -->
+    <linearGradient id="woodCutEnd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <!-- 3D "Game Over" Golden Letters Gradient -->
+    <linearGradient id="goTextGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#fef08a" />
+      <stop offset="60%" stop-color="#facc15" />
+      <stop offset="90%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="goBannerShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#021426" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- ========================================================================= -->
+  <!-- 1. RUSTIC WOODEN LOG SIGN WITH JAGGED CUTOUT ENDS                         -->
+  <!-- ========================================================================= -->
+  <g filter="url(#goBannerShadow)">
+    <!-- Wooden Plank Outer Outline (Slightly arched) -->
+    <path
+      d="M36 28 
+         C70 18, 140 12, 180 12 
+         C220 12, 290 18, 324 28
+         L338 34 
+         L330 46 
+         L342 58 
+         L328 72 
+         L336 86 
+         L320 92
+         C285 102, 220 108, 180 108
+         C140 108, 75 102, 40 92
+         L24 86 
+         L32 72 
+         L18 58 
+         L30 46 
+         L22 34 
+         Z"
+      fill="url(#woodLog)"
+      stroke="#291003"
+      stroke-width="5"
+      stroke-linejoin="round"
+    />
+
+    <!-- Wood Highlight Inner Bevel Ridge along top arch -->
+    <path
+      d="M48 30 C80 22, 140 18, 180 18 C220 18, 280 22, 312 30"
+      stroke="#fde68a"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.55"
+    />
+
+    <!-- Wood grain cracks and lines -->
+    <path d="M58 55 Q90 52 120 54" stroke="#451a03" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+    <path d="M240 52 Q270 56 300 53" stroke="#451a03" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+    <path d="M85 78 Q140 82 175 79" stroke="#291003" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+    <path d="M190 80 Q225 82 275 77" stroke="#291003" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+
+    <!-- Left & Right Wood Studs / Nails -->
+    <circle cx="48" cy="60" r="4.5" fill="#291003" stroke="#fde68a" stroke-width="1.5" />
+    <circle cx="312" cy="60" r="4.5" fill="#291003" stroke="#fde68a" stroke-width="1.5" />
+
+    <!-- ========================================================================= -->
+    <!-- 2. PUFFY 3D CARTOON "Game Over" TEXT                                      -->
+    <!-- ========================================================================= -->
+    <!-- Deep Dark Brown 3D Extrusion Backing -->
+    <text
+      x="180"
+      y="74"
+      text-anchor="middle"
+      font-family="'Fredoka', 'Nunito', 'Arial Rounded MT Bold', sans-serif"
+      font-size="44"
+      font-weight="900"
+      fill="#291003"
+      stroke="#291003"
+      stroke-width="14"
+      stroke-linejoin="round"
+      letter-spacing="1"
+    >
+      Game Over
+    </text>
+
+    <!-- Warm Orange Outline Layer -->
+    <text
+      x="180"
+      y="70"
+      text-anchor="middle"
+      font-family="'Fredoka', 'Nunito', 'Arial Rounded MT Bold', sans-serif"
+      font-size="44"
+      font-weight="900"
+      fill="#7c2d12"
+      stroke="#7c2d12"
+      stroke-width="10"
+      stroke-linejoin="round"
+      letter-spacing="1"
+    >
+      Game Over
+    </text>
+
+    <!-- Golden Highlight Stroke -->
+    <text
+      x="180"
+      y="67"
+      text-anchor="middle"
+      font-family="'Fredoka', 'Nunito', 'Arial Rounded MT Bold', sans-serif"
+      font-size="44"
+      font-weight="900"
+      fill="url(#goTextGold)"
+      stroke="#ffffff"
+      stroke-width="4"
+      stroke-linejoin="round"
+      letter-spacing="1"
+    >
+      Game Over
+    </text>
+
+    <!-- Front Golden-Yellow Face -->
+    <text
+      x="180"
+      y="67"
+      text-anchor="middle"
+      font-family="'Fredoka', 'Nunito', 'Arial Rounded MT Bold', sans-serif"
+      font-size="44"
+      font-weight="900"
+      fill="url(#goTextGold)"
+      letter-spacing="1"
+    >
+      Game Over
+    </text>
+  </g>
+</svg>
+
